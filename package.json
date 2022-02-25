@@ -1,0 +1,23 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "webpack + only javascript dom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdcalvelli/odin-restaurant-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdcalvelli/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/jdcalvelli/odin-restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
