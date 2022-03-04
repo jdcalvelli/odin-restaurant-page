@@ -6,9 +6,9 @@ const menuPage = (() => {
         navbar.renderNavBar();
         
         //test class
-        document.querySelector('body').appendChild(new menuItem('#', 'test item', '$1', 'this is test item 1').createMenuItem());
+        document.querySelector('.content').appendChild(new menuItem('#', 'test item', '$1', 'this is test item 1').createMenuItem());
 
-        document.querySelector('body').appendChild(new menuItem('#', 'test item 2', '$2', 'this is test item 2').createMenuItem());
+        document.querySelector('.content').appendChild(new menuItem('#', 'test item 2', '$2', 'this is test item 2').createMenuItem());
     }
     
     return { renderMenuPage }

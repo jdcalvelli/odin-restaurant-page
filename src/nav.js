@@ -30,7 +30,7 @@ const navbar = (() => {
         navDiv.appendChild(navLogo);
         navDiv.appendChild(navUL);
 
-        document.querySelector('body').appendChild(navDiv);
+        document.querySelector('.content').appendChild(navDiv);
     }
 
     return { renderNavBar }

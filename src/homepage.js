@@ -41,7 +41,7 @@ const homePage = (() => {
         heroDiv.appendChild(heroBtn);
         heroDiv.appendChild(heroSubDiv);
     
-        document.querySelector('body').appendChild(heroDiv);
+        document.querySelector('.content').appendChild(heroDiv);
     }
 
     return { renderHomePage }
