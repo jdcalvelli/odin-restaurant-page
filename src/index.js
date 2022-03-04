@@ -1,3 +1,5 @@
 import { homePage } from "./homepage";
+import { menuPage } from "./menu";
 
-homePage;
+//homePage.renderHomePage();
+menuPage.renderMenuPage();
