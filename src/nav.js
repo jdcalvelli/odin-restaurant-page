@@ -1,20 +1,18 @@
 const navbar = (() => {
 
-    const renderNavBar = () => {
-        //outer div for navbar
-        const navDiv = document.createElement('div')
-        
-        //h1 for logo to append to navDiv
-        const navLogo = document.createElement('h1');
+    //outer div for navbar
+    const navDiv = document.createElement('div')
+    //h1 for logo to append to navDiv
+    const navLogo = document.createElement('h1');
+    //inner navbar elements creation
+    const navUL = document.createElement('ul');
+    const navLIHome = document.createElement('li');
+    const navLIMenu = document.createElement('li');
+    const navLIContact = document.createElement('li');
 
+    const renderNavBar = () => {
         //h1 for logo text setting
         navLogo.textContent = 'restaurant name'
-
-        //inner navbar elements creation
-        const navUL = document.createElement('ul');
-        const navLIHome = document.createElement('li');
-        const navLIMenu = document.createElement('li');
-        const navLIContact = document.createElement('li');
 
         //inner navbar elements text setting
         navLIHome.textContent = 'home';
@@ -31,9 +29,19 @@ const navbar = (() => {
         navDiv.appendChild(navUL);
 
         document.querySelector('.content').appendChild(navDiv);
+
+        //calling bind elements
+        bindNavBarEvents();
     }
 
-    return { renderNavBar }
+    const bindNavBarEvents = () => {
+        //on click for navLIHome
+        navLIHome.addEventListener('click', () => {
+            console.log('hello world');
+        });
+    }
+
+    return { renderNavBar, bindNavBarEvents }
 
 })()
 
