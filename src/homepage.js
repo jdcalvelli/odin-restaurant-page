@@ -29,7 +29,7 @@ const homePage = (() => {
     
         //creating hours
         const heroHours = document.createElement('p');
-        heroHours.textContent =  'every day from 2 am to 8 am'
+        heroHours.textContent =  'every day from 2 am to 8 am';
     
         //appending address and hours to subdiv
         heroSubDiv.appendChild(heroHours);
