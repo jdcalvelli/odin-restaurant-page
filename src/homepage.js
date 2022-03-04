@@ -5,8 +5,11 @@ const homePage = (() => {
     const renderHomePage = () => {
         navbar.renderNavBar();
 
+        //HERO
         //creating hero section
         const heroDiv = document.createElement('div');
+        //append class
+        heroDiv.classList.add('heroDiv');
         
         //creating hero h1
         const heroH1 = document.createElement('h1');
