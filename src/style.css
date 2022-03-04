@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* NAV BAR */
+
+.navDiv {
+    height: 15%;
+    
+    background-color: aliceblue;
+    
+    display: flex;
+    align-items: center;
+
+    padding: 0 6rem;
+}
+
+.navLogo {
+    margin-right: 6rem;
+}
+
+.navUL {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 4rem;
+}
+
+.navLI {
+    cursor: pointer;
+}

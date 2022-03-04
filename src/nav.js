@@ -15,8 +15,26 @@ const navbar = (() => {
     const navLIContact = document.createElement('li');
 
     const renderNavBar = () => {
+
+        //DIV
+        //class attachment to navDiv
+        navDiv.classList.add('navDiv');
+
+        //NAV LOGO
+        //class attachment to navLogo
+        navLogo.classList.add('navLogo');
         //h1 for logo text setting
         navLogo.textContent = 'restaurant name'
+
+        //UL
+        //class attachment to uls
+        navUL.classList.add('navUL');
+
+        //LI
+        //class attachment to all LIs
+        navLIHome.classList.add('navLI');
+        navLIMenu.classList.add('navLI');
+        navLIContact.classList.add('navLI');
 
         //inner navbar elements text setting
         navLIHome.textContent = 'home';

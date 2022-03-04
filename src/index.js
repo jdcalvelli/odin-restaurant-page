@@ -1,4 +1,5 @@
 import { homePage } from "./homepage";
+import './style.css';
 
 homePage.renderHomePage();
 
