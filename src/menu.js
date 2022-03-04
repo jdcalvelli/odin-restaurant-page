@@ -12,7 +12,7 @@ const menuPage = (() => {
 
         //creating menu div
         const menuPageDiv = document.createElement('div');
-        document.querySelector('body').appendChild(menuPageDiv);
+        document.querySelector('.content').appendChild(menuPageDiv);
 
         //appending menu items to menupagediv
         menuPageDiv.appendChild(new menuItem('#', 'test item 1', '$1', 'this is test item 1').createMenuItem());

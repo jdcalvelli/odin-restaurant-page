@@ -1,3 +1,7 @@
+import { contactPage } from "./contact";
+import { homePage } from "./homepage";
+import { menuPage } from "./menu";
+
 const navbar = (() => {
 
     //outer div for navbar
@@ -37,11 +41,25 @@ const navbar = (() => {
     const bindNavBarEvents = () => {
         //on click for navLIHome
         navLIHome.addEventListener('click', () => {
-            console.log('hello world');
+            document.querySelector('.content').innerHTML = "";
+            homePage.renderHomePage();
         });
+
+        //on click for navLIMenu
+        navLIMenu.addEventListener('click', () => {
+            document.querySelector('.content').innerHTML = "";
+            menuPage.renderMenuPage();
+        })
+
+        //on click for navLIContact
+        navLIContact.addEventListener('click', () => {
+            document.querySelector('.content').innerHTML = "";
+            contactPage.renderContactPage();
+        })
+
     }
 
-    return { renderNavBar, bindNavBarEvents }
+    return { renderNavBar }
 
 })()
 
