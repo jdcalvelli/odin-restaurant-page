@@ -4,11 +4,24 @@ const menuPage = (() => {
    
     const renderMenuPage = () => {
         navbar.renderNavBar();
-        
-        //test class
-        document.querySelector('.content').appendChild(new menuItem('#', 'test item', '$1', 'this is test item 1').createMenuItem());
 
-        document.querySelector('.content').appendChild(new menuItem('#', 'test item 2', '$2', 'this is test item 2').createMenuItem());
+        //creating menu title
+        const menuPageTitle = document.createElement('h1');
+        menuPageTitle.textContent = "test menu";
+        document.querySelector('.content').appendChild(menuPageTitle)
+
+        //creating menu div
+        const menuPageDiv = document.createElement('div');
+        document.querySelector('body').appendChild(menuPageDiv);
+
+        //appending menu items to menupagediv
+        menuPageDiv.appendChild(new menuItem('#', 'test item 1', '$1', 'this is test item 1').createMenuItem());
+
+        menuPageDiv.appendChild(new menuItem('#', 'test item 2', '$2', 'this is test item 2').createMenuItem());
+
+        menuPageDiv.appendChild(new menuItem('#', 'test item 3', '$3', 'this is test item 3').createMenuItem());
+
+        menuPageDiv.appendChild(new menuItem('#', 'test item 4', '$4', 'this is test item 4').createMenuItem());
     }
     
     return { renderMenuPage }
