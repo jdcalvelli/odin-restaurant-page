@@ -6,14 +6,15 @@ const contactPage = (() => {
     const renderContactPage = () => {
         navbar.renderNavBar();
 
+        //creating contact us div
+        const contactPageDiv = document.createElement('div');
+        contactPageDiv.classList.add('contactPage');
+        document.querySelector('.content').appendChild(contactPageDiv);
+
         //creating contact us title
         const contactPageTitle = document.createElement('h1');
         contactPageTitle.textContent = "test contact us";
-        document.querySelector('.content').appendChild(contactPageTitle);
-
-        //creating contact us div
-        const contactPageDiv = document.createElement('div');
-        document.querySelector('.content').appendChild(contactPageDiv);
+        contactPageDiv.appendChild(contactPageTitle);
 
         //creating contact us address
         const contactAddress = document.createElement('p');
