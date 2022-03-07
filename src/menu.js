@@ -5,23 +5,32 @@ const menuPage = (() => {
     const renderMenuPage = () => {
         navbar.renderNavBar();
 
+        //MENU PAGE OVERALL DIV
+        const menuPageDiv = document.createElement('div');
+        menuPageDiv.classList.add('menuPageDiv');
+        document.querySelector('.content').appendChild(menuPageDiv);
+
+        //MENU TITLE
         //creating menu title
         const menuPageTitle = document.createElement('h1');
         menuPageTitle.textContent = "test menu";
-        document.querySelector('.content').appendChild(menuPageTitle)
+        menuPageTitle.classList.add('menuTitle');
+        menuPageDiv.appendChild(menuPageTitle);
 
         //creating menu div
-        const menuPageDiv = document.createElement('div');
-        document.querySelector('.content').appendChild(menuPageDiv);
+        const menuItemsDiv = document.createElement('div');
+        menuItemsDiv.classList.add('menuItems');
+        
+        menuPageDiv.appendChild(menuItemsDiv);
 
         //appending menu items to menupagediv
-        menuPageDiv.appendChild(new menuItem('#', 'test item 1', '$1', 'this is test item 1').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem('#', 'test item 1', '$1', 'this is test item 1').createMenuItem());
 
-        menuPageDiv.appendChild(new menuItem('#', 'test item 2', '$2', 'this is test item 2').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem('#', 'test item 2', '$2', 'this is test item 2').createMenuItem());
 
-        menuPageDiv.appendChild(new menuItem('#', 'test item 3', '$3', 'this is test item 3').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem('#', 'test item 3', '$3', 'this is test item 3').createMenuItem());
 
-        menuPageDiv.appendChild(new menuItem('#', 'test item 4', '$4', 'this is test item 4').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem('#', 'test item 4', '$4', 'this is test item 4').createMenuItem());
     }
     
     return { renderMenuPage }
@@ -39,6 +48,7 @@ class menuItem {
     createMenuItem() {
         //create div to hold elements
         const menuItemDiv = document.createElement('div');
+        menuItemDiv.classList.add('menuItem');
 
         //create image element
         const menuItemImg = document.createElement('img');
