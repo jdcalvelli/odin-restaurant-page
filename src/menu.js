@@ -1,5 +1,10 @@
 import { navbar } from "./nav"
 
+import Hotdog from './hotdog.png';
+import Hamburger from './hamburger.png';
+import Meat from './meat.png';
+import Wine from './wine.png';
+
 const menuPage = (() => {
    
     const renderMenuPage = () => {
@@ -24,13 +29,13 @@ const menuPage = (() => {
         menuPageDiv.appendChild(menuItemsDiv);
 
         //appending menu items to menupagediv
-        menuItemsDiv.appendChild(new menuItem('#', 'test item 1', '$1', 'this is test item 1').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem(Hotdog, 'test item 1', '$1', 'this is test item 1').createMenuItem());
 
-        menuItemsDiv.appendChild(new menuItem('#', 'test item 2', '$2', 'this is test item 2').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem(Hamburger, 'test item 2', '$2', 'this is test item 2').createMenuItem());
 
-        menuItemsDiv.appendChild(new menuItem('#', 'test item 3', '$3', 'this is test item 3').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem(Meat, 'test item 3', '$3', 'this is test item 3').createMenuItem());
 
-        menuItemsDiv.appendChild(new menuItem('#', 'test item 4', '$4', 'this is test item 4').createMenuItem());
+        menuItemsDiv.appendChild(new menuItem(Wine, 'test item 4', '$4', 'this is test item 4').createMenuItem());
     }
     
     return { renderMenuPage }
@@ -54,6 +59,11 @@ class menuItem {
         const menuItemImg = document.createElement('img');
         menuItemImg.src = this.imageSrc;
 
+
+        //menu item text div creation
+        const menuItemTextDiv = document.createElement('div');
+        menuItemTextDiv.classList.add('menuItemText');
+
         //create item title h2 element
         const menuItemTitle = document.createElement('h2');
         menuItemTitle.textContent = this.itemName;
@@ -66,11 +76,14 @@ class menuItem {
         const menuItemDesc = document.createElement('p');
         menuItemDesc.textContent = this.itemDesc;
 
+        //ATTACH TEXT TO TEXT DIV
+        menuItemTextDiv.appendChild(menuItemTitle);
+        menuItemTextDiv.appendChild(menuItemPrice);
+        menuItemTextDiv.appendChild(menuItemDesc);
+
         //ATTACH TO MENU DIV
         menuItemDiv.appendChild(menuItemImg);
-        menuItemDiv.appendChild(menuItemTitle);
-        menuItemDiv.appendChild(menuItemPrice);
-        menuItemDiv.appendChild(menuItemDesc);
+        menuItemDiv.appendChild(menuItemTextDiv);
 
         //RETURNING NEW MENU ITEM DIV TO PLACE WHEREVER
         return menuItemDiv;

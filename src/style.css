@@ -89,15 +89,14 @@
 .menuItem {
     background-color: bisque;
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menuItem img {
-    grid-column: 1;
-}
+    height: 6rem;
+    width: 6rem;
 
-.menuItem h2, p {
-    grid-column: 2;
+    margin-right: 3rem;
 }
